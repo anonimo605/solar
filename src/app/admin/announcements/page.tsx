@@ -29,7 +29,7 @@ const announcementFormSchema = z.object({
 export default function AnnouncementsPage() {
     const router = useRouter();
     const { toast } = useToast();
-    const { user } from useAuth();
+    const { user } = useAuth();
 
     const form = useForm<z.infer<typeof announcementFormSchema>>({
         resolver: zodResolver(announcementFormSchema),
