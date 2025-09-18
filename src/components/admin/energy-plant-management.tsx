@@ -50,7 +50,7 @@ const satelliteSchema = z.object({
 });
 
 
-const EnergyPlantManagement = () => {
+export default function EnergyPlantManagement() {
     const { user } = useAuth();
     const [satellites, setSatellites] = useState<Satellite[]>([]);
     const [satelliteImageDataUrl, setSatelliteImageDataUrl] = useState<string | null>(null);
@@ -485,4 +485,3 @@ const EnergyPlantManagement = () => {
     );
 }
 
-export default EnergyPlantManagement;
